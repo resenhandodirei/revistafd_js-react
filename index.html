@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Crie um elemento temporário para conter o conteúdo
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = data;
+
+                    // Extraia o conteúdo do body do header.html
+                    const headerContent = tempDiv.querySelector('body').innerHTML;
+
+                    // Insira o conteúdo extraído no placeholder
+                    document.getElementById('header-placeholder').innerHTML = headerContent;
+                })
+                .catch(error => console.error('Erro ao carregar o header:', error));
+        });
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <!-- Conteúdo adicional do index.html -->
+    <div>
+        <!-- Adicione aqui o restante do conteúdo do index.html -->
+        <h1>Bem-vindo à Faculdade de Direito - UFC</h1>
+        <p>Este é o conteúdo principal da página.</p>
+    </div>
+</body>
+</html>
