@@ -6,10 +6,10 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: '#FFF0DA', // Off white para o fundo
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: '#FFA500', // Laranja para a borda
+    //backgroundColor: '#FFF0DA', // Off white para o fundo
+    //borderRadius: 8,
+    //borderWidth: 1,
+    //borderColor: '#FFA500', // Laranja para a borda
   },
   pageButton: {
     backgroundColor: '#FFA500', // Laranja para os botões
