@@ -6,16 +6,15 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: '#FFF0DA', // Off white para o fundo
-    //borderBottomWidth: 1,
-    borderBottomColor: '#FFA500', // Laranja para destacar a separação
+    backgroundColor: '#FFF0DA',
+    borderBottomColor: '#FFA500',
     textTransform: 'uppercase',
   },
   logo: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#FFA500', // Laranja para o logotipo
-    marginRight: 80, // Aumentado para maior distanciamento
+    color: '#FFA500',
+    marginRight: 80,
   },
   navContainer: {
     flexDirection: 'row',
@@ -23,16 +22,20 @@ export const styles = StyleSheet.create({
   },
   navItem: {
     marginHorizontal: 8,
+    position: 'relative', // Important for dropdown positioning
   },
   navText: {
     fontSize: 14,
-    color: '#120A8F', // Azul marinho para itens de navegação
+    color: '#120A8F',
+  },
+  navTextHover: {
+    color: '#FFA500',
   },
   dropdown: {
     position: 'absolute',
-    top: 50,
-    left: 100,
-    backgroundColor: '#FFF0DA', // Off white para o fundo do dropdown
+    top: '100%', // Positions directly below the nav item
+    left: 0,
+    backgroundColor: '#FFF0DA',
     padding: 12,
     borderRadius: 4,
     shadowColor: '#000',
@@ -41,7 +44,9 @@ export const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     elevation: 3,
     borderWidth: 1,
-    borderColor: '#FFA500', // Laranja para borda do dropdown
+    borderColor: '#FFA500',
+    minWidth: 200, // Ensure sufficient width
+    zIndex: 1, // Ensure it appears above other elements
   },
   dropdownGroup: {
     marginBottom: 12,
@@ -49,12 +54,22 @@ export const styles = StyleSheet.create({
   dropdownHeader: {
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#FFA500', // Laranja para o cabeçalho de cada grupo
+    color: '#FFA500',
     marginBottom: 6,
   },
   dropdownItem: {
     fontSize: 14,
-    color: '#120A8F', // Azul marinho para os itens do dropdown
+    color: '#120A8F',
     paddingVertical: 4,
+  },
+  searchInput: {
+    height: 40,
+    borderColor: '#CCC',
+    borderWidth: 1,
+    borderRadius: 4,
+    paddingLeft: 8,
+    marginLeft: 16,
+    flex: 1,
+    maxWidth: 200,
   },
 });
