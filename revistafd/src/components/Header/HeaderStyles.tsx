@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     backgroundColor: '#FFF0DA', // Off white para o fundo
-    borderBottomWidth: 1,
+    //borderBottomWidth: 1,
     borderBottomColor: '#FFA500', // Laranja para destacar a separação
     textTransform: 'uppercase',
   },
@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
     marginHorizontal: 8,
   },
   navText: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#120A8F', // Azul marinho para itens de navegação
   },
   dropdown: {
@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 4,
     shadowColor: '#000',
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.2,
     shadowRadius: 4,
     shadowOffset: { width: 0, height: 2 },
     elevation: 3,
