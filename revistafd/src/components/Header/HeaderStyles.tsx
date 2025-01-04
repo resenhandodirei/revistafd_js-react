@@ -6,14 +6,16 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#FFF0DA', // Off white para o fundo
     borderBottomWidth: 1,
-    borderBottomColor: '#dee2e6',
+    borderBottomColor: '#FFA500', // Laranja para destacar a separação
+    textTransform: 'uppercase',
   },
   logo: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#343a40',
+    color: '#FFA500', // Laranja para o logotipo
+    marginRight: 80, // Aumentado para maior distanciamento
   },
   navContainer: {
     flexDirection: 'row',
@@ -24,13 +26,13 @@ export const styles = StyleSheet.create({
   },
   navText: {
     fontSize: 16,
-    color: '#007bff',
+    color: '#120A8F', // Azul marinho para itens de navegação
   },
   dropdown: {
     position: 'absolute',
     top: 50,
     left: 100,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#FFF0DA', // Off white para o fundo do dropdown
     padding: 12,
     borderRadius: 4,
     shadowColor: '#000',
@@ -38,6 +40,8 @@ export const styles = StyleSheet.create({
     shadowRadius: 4,
     shadowOffset: { width: 0, height: 2 },
     elevation: 3,
+    borderWidth: 1,
+    borderColor: '#FFA500', // Laranja para borda do dropdown
   },
   dropdownGroup: {
     marginBottom: 12,
@@ -45,12 +49,12 @@ export const styles = StyleSheet.create({
   dropdownHeader: {
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#343a40',
+    color: '#FFA500', // Laranja para o cabeçalho de cada grupo
     marginBottom: 6,
   },
   dropdownItem: {
     fontSize: 14,
-    color: '#6c757d',
+    color: '#120A8F', // Azul marinho para os itens do dropdown
     paddingVertical: 4,
   },
 });
