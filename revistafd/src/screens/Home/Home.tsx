@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import { styles } from './HomeStyles';
 import { Header } from '../../components/Header/Header';
 import { Pagination } from '../../components/Pagination/Pagination';
+import { Footer } from '../../components/Footer/Footer';
 
 export function Home() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,11 +16,15 @@ export function Home() {
   return (
     <View style={styles.container}>
       <Header />
+
+      
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
         onPageChange={handlePageChange}
       />
+
+      <Footer />
     </View>
   );
 }
