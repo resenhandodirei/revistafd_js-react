@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { styles } from './HeaderStyles';
 import { CustomButton } from '../CustomButton/CustomButton';
 
+import { useWindowDimensions } from 'react-native';
+
+
 export function Header() {
+  const { width } = useWindowDimensions();
+  const isSmallScreen = width < 600;
+
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
 
@@ -25,7 +31,7 @@ export function Header() {
       <Text style={styles.logo}>Revista da Faculdade de Direito da UFC</Text>
       <View style={styles.navContainer}>
         {navItems.map((item, index) => (
-          <View
+          <TouchableOpacity
             key={index}
             style={styles.navItem}
             onMouseEnter={() => handleMouseEnter(item)}
@@ -50,19 +56,25 @@ export function Header() {
                 <View style={styles.dropdownGroup}>
                   <Text style={styles.dropdownHeader}>Políticas</Text>
                   <Text style={styles.dropdownItem}>Políticas de Seção</Text>
-                  <Text style={styles.dropdownItem}>Processo de Avaliação pelos Pares</Text>
+                  <Text style={styles.dropdownItem}>
+                    Processo de Avaliação pelos Pares
+                  </Text>
                   <Text style={styles.dropdownItem}>Periodicidade</Text>
-                  <Text style={styles.dropdownItem}>Política de Acesso Livre</Text>
+                  <Text style={styles.dropdownItem}>
+                    Política de Acesso Livre
+                  </Text>
                   <Text style={styles.dropdownItem}>Arquivamento</Text>
                 </View>
                 <View style={styles.dropdownGroup}>
                   <Text style={styles.dropdownHeader}>Outros</Text>
                   <Text style={styles.dropdownItem}>Mapa do Portal</Text>
-                  <Text style={styles.dropdownItem}>Sobre este sistema de publicação</Text>
+                  <Text style={styles.dropdownItem}>
+                    Sobre este sistema de publicação
+                  </Text>
                 </View>
               </View>
             )}
-          </View>
+          </TouchableOpacity>
         ))}
         {/* Search input */}
         <TextInput
@@ -73,13 +85,19 @@ export function Header() {
         />
       </View>
 
-      <CustomButton title={'Login'} onPress={function (): void {
-              throw new Error('Function not implemented.');
-          } } />
+      <CustomButton
+        title={'Login'}
+        onPress={() => {
+          // Implement login functionality here
+        }}
+      />
 
-    <CustomButton title={'Cadastro'} onPress={function (): void {
-              throw new Error('Function not implemented.');
-          } } />
+      <CustomButton
+        title={'Cadastro'}
+        onPress={() => {
+          // Implement signup functionality here
+        }}
+      />
     </View>
   );
 }

@@ -1,4 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
 
 export const styles = StyleSheet.create({
   container: {
@@ -6,30 +8,39 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: '#FFF0DA',
+    backgroundColor: '#FF8F00',
     borderBottomColor: '#FFA500',
-    textTransform: 'uppercase',
+  },
+  containerSmall: {
+    padding: 8, // Menos padding em telas menores
   },
   logo: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#FFA500',
+    color: '#120A8F',
     marginRight: 80,
   },
   navContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    flexWrap: 'wrap', // Permite que os itens se quebrem em linhas
+    justifyContent: 'space-between', // Para distribuir bem os itens
+  },
+  navContainerSmall: {
+    flexDirection: 'column', // Muda para coluna em telas pequenas
+    alignItems: 'flex-start',
   },
   navItem: {
     marginHorizontal: 8,
     position: 'relative', // Important for dropdown positioning
+    width: windowWidth > 600 ? 'auto' : '100%', // Ajusta a largura para telas menores
   },
   navText: {
     fontSize: 14,
     color: '#120A8F',
   },
   navTextHover: {
-    color: '#FFA500',
+    color: '#FFF0DA',
   },
   dropdown: {
     position: 'absolute',
@@ -39,13 +50,13 @@ export const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 4,
     shadowColor: '#000',
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.8,
     shadowRadius: 4,
     shadowOffset: { width: 0, height: 2 },
     elevation: 3,
     borderWidth: 1,
     borderColor: '#FFA500',
-    minWidth: 200, // Ensure sufficient width
+    minWidth: '100%', // Ensure sufficient width
     zIndex: 1, // Ensure it appears above other elements
   },
   dropdownGroup: {
@@ -54,7 +65,7 @@ export const styles = StyleSheet.create({
   dropdownHeader: {
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#FFA500',
+    color: '#FF8F00',
     marginBottom: 6,
   },
   dropdownItem: {
@@ -63,13 +74,15 @@ export const styles = StyleSheet.create({
     paddingVertical: 4,
   },
   searchInput: {
-    height: 40,
-    borderColor: '#CCC',
+    height: 30,
+    borderColor: '#FFF0DA',
     borderWidth: 1,
     borderRadius: 4,
     paddingLeft: 8,
     marginLeft: 16,
     flex: 1,
     maxWidth: 200,
+    color: '#FFF0DA',
   },
 });
+
