@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#FFA500', // Laranja predominante
+    backgroundColor: '#FF8F00', // Laranja predominante
     paddingVertical: 16,
     paddingHorizontal: 20,
   },
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     paddingLeft: 10, // Espaçamento entre os blocos
   },
   title: {
-    color: '#fff',
+    color: '#FFF0DA',
     fontSize: 12,
     fontWeight: 'bold',
     marginBottom: 8,

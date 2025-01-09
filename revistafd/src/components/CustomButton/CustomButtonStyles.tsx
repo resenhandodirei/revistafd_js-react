@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#FFA500', // Laranja para o botão
+    backgroundColor: '#120A8F', 
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 16,
-    color: '#FFF', // Branco para o texto do botão
+    color: '#FFF0DA', // Branco para o texto do botão
     fontWeight: 'bold',
   },
 });
