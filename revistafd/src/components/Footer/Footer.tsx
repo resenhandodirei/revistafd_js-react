@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { styles } from './FooterStyles';
+import { CustomButton } from '../CustomButton/CustomButton';
+
 
 export function Footer() {
   return (
@@ -21,6 +23,8 @@ export function Footer() {
           <Text style={[styles.text, {fontWeight: 'bold'}]}>
             Rev. Fac. Dir. - ISSN: 0103-2496 (impresso) / 2317-2940 (eletrônico)
           </Text>
+
+          
         </View>
 
         <View style={styles.textContainerTeam}>
